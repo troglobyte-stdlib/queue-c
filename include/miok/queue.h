@@ -3,8 +3,8 @@
 // author: Michael Brockus
 // gmail: <michaelbrockus@gmail.com>
 //
-#ifndef MIOK_PACKAGE_H
-#define MIOK_PACKAGE_H
+#ifndef MIOK_QUEUE_PACKAGE_H
+#define MIOK_QUEUE_PACKAGE_H
 
 #ifdef __cplusplus
 extern "C"
@@ -14,10 +14,10 @@ extern "C"
 //
 // Macros to control the visibility of functions provided by this package
 //
-#ifdef BUILDING_MIOK_PACKAGE
-#define MIOK_PUBLIC __attribute__((visibility("default")))
+#ifdef BUILDING_MIOK_QUEUE_PACKAGE
+#define MIOK_QUEUE_PUBLIC __attribute__((visibility("default")))
 #else
-#define MIOK_PUBLIC
+#define MIOK_QUEUE_PUBLIC
 #endif
 
 //
@@ -31,7 +31,7 @@ extern "C"
 // package name and everything should just work.
 //
 
-MIOK_PUBLIC const char *greet(void);
+MIOK_QUEUE_PUBLIC const char *greet(void);
 
 #ifdef __cplusplus
 }
