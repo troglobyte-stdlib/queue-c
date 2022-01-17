@@ -9,7 +9,7 @@
 // project since its important to test once implementation against a set
 // of common test cases
 //
-#include "miok/package.h"
+#include "miok/queue.h"
 #include <unity.h>
 
 //
