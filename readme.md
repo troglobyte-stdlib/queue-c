@@ -1,10 +1,13 @@
-# Miok package
+# Miok queue
 
 ## About
 
 * * *
 
-Please add relevant information about your package.
+The Queue itself is a linear structure which follows a particular order in
+which the operations are performed. The order is First In First Out (FIFO).
+The main data type that is returned will be the classic c string or char
+array.
 
 The design of the API has significant impact on its usage. The principle of
 information hiding describes the role of programming interfaces as enabling
@@ -36,8 +39,8 @@ in your subprojects directory and include the dependency in your project.
 
 ```console
 [wrap-git]
-directory = miok-module
-url = https://github.com/miok-modules/module.git
+directory = miok-queue-c
+url = https://github.com/miok-modules/queue-c.git
 revision = main
 
 [provide]
@@ -48,7 +51,7 @@ module = module_dep
 The next step should be to add the package to your Meson project:
 
 ```meson
-module_dep = dependency('miko-module')
+module_dep = dependency('miko-queue-c')
 
 executable('prog', 'main.c',
     dependencies : [module_dep])
@@ -70,7 +73,7 @@ more please view the API documentation thanks.
 ```c
 #include <stdio>
 #include <stdlib>
-#include <miko/package.h>
+#include <miko/queue.h>
 
 
 //
@@ -89,13 +92,7 @@ int main(void)
 * * *
 
 You may find that the project has a community in which you
-can keep up to date on the latest features, apps being developed and news. Simply done by
-joining on [Reddit](https://www.reddit.com/r/miok/)
-
-You may find that I have some platforms in which you can follow me and stay updated on what I’m working on.
-
-- Reddit: [Michael Gene Brockus](https://www.reddit.com/u/Native_Oklatopian)
-- facebook: [Michael Gene Brockus](https://michaelbrockus.medium.com/)
-- linkedin: [Michael Gene Brockus](https://www.linkedin.com/in/michael-brockus)
+can keep up to date on the latest features, apps being developed
+and news. Simply done by joining on [Reddit](https://www.reddit.com/r/miok/)
 
 Lastly don't forget to have a cup of virtual coffee, and happy coding. ☕💻
