@@ -5,5 +5,5 @@ miok_queue_lib = static_library('miok-queue',
     install: true)
 
 miok_queue_dep = declare_dependency(
-    link_w ith: miok_queue_lib,
+    link_with: miok_queue_lib,
     include_directories: inc_dir)
