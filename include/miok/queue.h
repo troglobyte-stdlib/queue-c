@@ -31,7 +31,25 @@ extern "C"
 // package name and everything should just work.
 //
 
-MIOK_QUEUE_PUBLIC const char *greet(void);
+typedef struct QueueOf QueueOf;
+
+//
+// Constructor and destructor functions
+//
+
+MIOK_QUEUE_PUBLIC QueueOf *miok_queue_create(void);
+MIOK_QUEUE_PUBLIC void miok_queue_erase(QueueOf **structure_ref);
+
+//
+// Operations provided
+//
+
+MIOK_QUEUE_PUBLIC void miok_queue_push(QueueOf *structure_ptr, const char *data);
+MIOK_QUEUE_PUBLIC const char *miok_queue_pop(QueueOf *structure_ptr);
+MIOK_QUEUE_PUBLIC const char *miok_queue_peek(QueueOf *structure_ptr);
+MIOK_QUEUE_PUBLIC unsigned int miok_queue_its_empty(QueueOf *structure_ptr);
+MIOK_QUEUE_PUBLIC unsigned int miok_queue_not_empty(QueueOf *structure_ptr);
+  
 
 #ifdef __cplusplus
 }
